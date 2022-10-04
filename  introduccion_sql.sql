@@ -1,5 +1,6 @@
 -- CREAMOS LA TABLA CON SUS RESPECTIVOS CAMPOS
 CREATE TABLE personas(
+id SERIAL PRIMARY KEY,
 identificacion VARCHAR(10),
 nombre VARCHAR(25),
 apellidopaterno VARCHAR(15),
