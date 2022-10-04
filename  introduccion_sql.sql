@@ -73,3 +73,13 @@ SELECT distinct sexo FROM personas;
 
 -- NOS PERMITE MOSTRAR REGISTROS BASADOS EN DOS CONDICIONES CON LOS OPERADORES LOGICOS
 SELECT*FROM personas WHERE ciudad='Cali' OR ciudad='Ibague';
+
+-- NOS PERMITE MOSTRAR LAS PERSONAS CON MENOR SUELDO
+SELECT nombre, min(sueldo) AS menorsueldo FROM personas GROUP BY nombre 
+
+-- NOS PERMITE MOSTRAR LAS PERSONAS CON MAYOR Y CON MENOR SUELDO
+SELECT nombre, max(sueldo) AS mayorsueldo, min(sueldo) AS menorsueldo  FROM personas GROUP BY nombre
+
+-- NOS PERMITE MOSTRAR CUANTAS PERSONAS ESTAN EN UN RANGO DE SUELDO
+SELECT nombre, count(*) FROM personas WHERE sueldo BETWEEN 100 and 2000
+GROUP BY nombre 
